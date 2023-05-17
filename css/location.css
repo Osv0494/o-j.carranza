@@ -1,0 +1,46 @@
+.location {
+  margin-top: 0;
+  width: 100%;
+  height: 500px;
+  background: var(--primary-color);
+  display: grid;
+  place-items: center;
+  gap: 0;
+}
+.location_phoneAddress {
+  color: var(--text-color-inverse);
+  font-size: 20px;
+  display: grid;
+  gap: 5px;
+}
+.location-map {
+  width: 300px;
+  height: 200px;
+  border-radius: 14px;
+  border: 0;
+  margin-top: -150px;
+}
+.location-map:hover {
+  box-shadow: 0 0 4px 5px var(--navbar-shallow-color);
+}
+@media (min-width: 950px) {
+  .location {
+    margin-top: 250px;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+  .location_phoneAddress {
+    font-size: 25px;
+    display: grid;
+    gap: 20px;
+    place-items: center;
+  }
+  .location-map {
+    width: 500px;
+    height: 350px;
+  }
+}

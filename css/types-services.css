@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Noto+Sans:wght@700&family=Roboto:wght@100&display=swap");
+.wave {
+  width: 100%;
+  position: relative;
+  bottom: -5px;
+}
+.wave_bottom {
+  position: relative;
+  width: 100%;
+  top: -5px;
+}
+.telefNumber {
+  text-decoration: none;
+  color: var(--text-color-inverse);
+  width: 70px;
+  font-size: 15px;
+  border: 1px solid var(--text-color-inverse);
+  border-radius: 4px;
+  padding: 0 2px 0 2px;
+  background-color: var(--phone-number-background);
+}
+.telefNumber:hover {
+  background: var(--primary-color);
+}
+.types-services {
+  width: 100%;
+}
+
+.types-services_body {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  padding: 50px;
+  background-color: var(--primary-color);
+  color: var(--text-color-inverse);
+}
+.types-services_img {
+  width: 275px;
+  height: 150px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.types-services_text {
+  width: 170px;
+  height: 160px;
+  font-size: 15px;
+  font-family: "Noto Sans", sans-serif;
+}
+#text-1 {
+  padding: 0;
+}
+#text-2 {
+  padding: 0;
+}
+#text-4,
+#text-5 {
+  /*display: inline;
+  place-items: center;*/
+}
+#text-6 {
+  padding: 0;
+}
+/*gift-card numver 1*/
+#text-3 {
+  padding: 0;
+}
+@media (min-width: 820px) {
+  .telefNumber {
+    width: 40px;
+    font-size: 15px;
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+  }
+  .types-services {
+    width: 100%;
+    height: 55%;
+  }
+  .types-services_body {
+    min-height: 100%;
+    display: grid;
+    grid-template-areas:
+      "img-1 text-1"
+      "text-2 img-2"
+      "img-3 text-3"
+      "text-4 img-4"
+      "img-5 text-5"
+      "text-6 img-6";
+    /*grid-template-columns: repeat(auto-fill, 275px);*/
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+    gap: 50px;
+    padding: 100px;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .types-services_img {
+    width: 275px;
+    height: 150px;
+    border-radius: 4px;
+  }
+  .types-services_text {
+    width: 275px;
+    height: 150px;
+    font-size: 15px;
+    font-family: "Noto Sans", sans-serif;
+  }
+  #img-1 {
+    grid-area: img-1;
+  }
+  #img-2 {
+    grid-area: img-2;
+  }
+  #img-3 {
+    grid-area: img-3;
+  }
+  #img-4 {
+    grid-area: img-4;
+  }
+  #img-5 {
+    grid-area: img-5;
+  }
+  #img-6 {
+    grid-area: img-6;
+  }
+  #text-1 {
+    grid-area: text-1;
+    padding: 30px 0 30px 0;
+  }
+  #text-2 {
+    grid-area: text-2;
+    word-spacing: 5px;
+    padding: 20px 0 20px 0;
+  }
+  #text-4 {
+    grid-area: text-4;
+    display: grid;
+    place-items: center;
+  }
+  #text-5 {
+    grid-area: text-5;
+    display: grid;
+    place-items: center;
+  }
+  #text-6 {
+    grid-area: text-6;
+    padding: 25px 0 25px 0;
+  }
+  /*gift-card numver 1*/
+  #text-3 {
+    grid-area: text-3;
+    padding: 25px 0 25px 0;
+  }
+}
+/**/
+@media (min-width: 950px) {
+  .telefNumber {
+    width: 170px;
+    font-size: 25px;
+    color: var(--text-color-inverse);
+    border: 2px solid var(--text-color-inverse);
+    border-radius: 14px;
+    padding: 3px;
+  }
+  .types-services {
+    height: 60%;
+    /*display: flex;
+    flex-direction: column;*/
+  }
+
+  .types-services_body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 100px;
+    padding: 0 200px;
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+  }
+  .types-services_img {
+    width: 650px;
+    height: 350px;
+    border-radius: 14px;
+  }
+  .types-services_text {
+    width: 650px;
+    height: 350px;
+    font-size: 30px;
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  #text-1 {
+    grid-area: text-1;
+    padding: 50px;
+  }
+  #text-2 {
+    grid-area: text-2;
+    word-spacing: 5px;
+    padding: 50px;
+  }
+  #text-4 {
+    grid-area: text-4;
+    display: grid;
+    place-items: center;
+  }
+  #text-5 {
+    grid-area: text-5;
+    display: grid;
+    place-items: center;
+  }
+  #text-6 {
+    grid-area: text-6;
+    padding: 50px;
+  }
+  /*gift-card numver 1*/
+  #text-3 {
+    grid-area: text-3;
+    padding: 50px;
+  }
+}

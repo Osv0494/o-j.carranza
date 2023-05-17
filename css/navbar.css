@@ -1,0 +1,187 @@
+.topheader {
+  position: fixed;
+  box-shadow: 0 4px 5px var(--navbar-shallow-color);
+  background-color: var(--theme-color);
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.topnav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  padding: 10px; /*10*/
+  max-width: 820px;
+  margin: 0;
+}
+.logo_img {
+  width: 145px;
+  height: 40px;
+  margin: 0 auto 0 5px;
+  box-shadow: 0 0 4px 5px var(--navbar-shallow-color);
+  border-radius: 7px;
+}
+
+.schedules {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  place-items: center;
+  color: var(--primary-color);
+}
+.schedules_clock,
+.schedules_calendar,
+.schedules_map,
+.schedules_phone {
+  width: 25px;
+  height: 25px;
+  margin-right: 0;
+  margin-left: 0;
+  cursor: pointer;
+}
+.schedules_info {
+  background: var(--primary-color);
+  color: var(--text-color-inverse);
+  position: absolute;
+  width: 200px; /*200px*/
+  height: 30px;
+  font-size: 20px;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  top: 60px;
+}
+.hour {
+  display: none; /*flex*/
+}
+.days {
+  display: none; /*flex*/
+}
+.number {
+  text-decoration: none;
+  display: none; /*flex*/
+}
+
+.address {
+  text-decoration: none;
+  width: 300px;
+  position: absolute;
+  font-size: 20px;
+  display: none; /*flex*/
+}
+@media (min-width: 820px) {
+  .schedules {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    place-items: center;
+    color: var(--primary-color);
+  }
+  .schedules_clock,
+  .schedules_calendar,
+  .schedules_map,
+  .schedules_phone {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    margin-left: 0;
+    cursor: pointer;
+  }
+  .schedules_info {
+    background: var(--primary-color);
+    color: var(--text-color-inverse);
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 14px;
+    align-items: center;
+    justify-content: center;
+    right: 300px;
+    top: 15px;
+  }
+  .address {
+    width: 300px;
+    position: absolute;
+    font-size: 20px;
+    display: none; /*flex*/
+  }
+}
+@media (min-width: 950px) {
+  .topheader {
+    position: fixed;
+    box-shadow: 0 4px 5px var(--navbar-shallow-color); /*barra de decoracion del navbar*/
+    background-color: var(--theme-color);
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .topnav {
+    display: flex; /*para que los elemntos queden en fila*/
+    justify-content: space-between; /*para que alla un espacio en el medio de los elemntos 
+    y estos terminen en cada lago*/
+    padding: 10px;
+    max-width: 100%; /*para definir el ancho de mi elento asi si el monitor es mas grande que mi 
+    parametro, estos elemntos quedaran asta los 980px que les di*/
+    margin: 0 auto; /*usa de referncia las manecillas del reloj*/
+  }
+  .logo_img {
+    width: 300px;
+    height: 60px;
+    box-shadow: 0 0 4px 5px var(--navbar-shallow-color);
+    border-radius: 7px;
+    margin-left: 100px;
+  }
+
+  .schedules {
+    width: 1100px;
+    height: 30px;
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 15px 30px 15px auto;
+    z-index: none;
+    display: grid;
+    grid-template-columns: 30px 180px 30px 180px 30px 150px 30px 600px;
+    grid-template-rows: 30px;
+    gap: 10px;
+  }
+  .schedules_clock,
+  .schedules_calendar,
+  .schedules_map,
+  .schedules_phone {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .schedules_info {
+    background: transparent;
+    color: var(--primary-color);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border-radius: 0;
+    right: 0;
+    top: 0;
+  }
+  .hour {
+    display: flex; /*flex*/
+  }
+  .days {
+    display: flex; /*flex*/
+  }
+  .number {
+    display: flex; /*flex*/
+  }
+  .address {
+    position: relative;
+    font-size: 20px;
+    display: inline; /*flex*/
+  }
+}

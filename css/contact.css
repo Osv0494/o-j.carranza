@@ -1,0 +1,127 @@
+.contact {
+  width: 300px;
+  background-color: var(--primary-color);
+  color: var(--text-color-inverse);
+  font-size: 18px;
+  border-radius: 14px;
+  padding: 10px;
+  display: grid;
+  margin: auto;
+  gap: 10px;
+}
+/*usa greid para pocicionar elementos dentro de una lista*/
+
+.contact p,
+.contact h2,
+.contact ul {
+  margin: 0;
+  padding: 0;
+}
+.contact-title {
+  color: var(--text-color-inverse);
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+.contact-details,
+.contact-form {
+  display: grid;
+  gap: 15px;
+}
+.contact-details-group,
+.contact-form-group {
+  display: grid;
+  gap: 3px;
+}
+.contact-label {
+  color: var(--footer-color);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+  border-radius: 7px;
+  border: none;
+  height: 30px;
+  padding: 5px 10px;
+}
+.contact-form textarea {
+  height: auto;
+  resize: vertical; /*donde escribimos mensajes solo abrira hacia debajo no a los costados*/
+}
+.submit-btn {
+  width: 100%;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 7px;
+  color: var(--text-color-inverse);
+  border: 7px solid var(--theme-color);
+  cursor: pointer;
+}
+.submit-btn:hover {
+  box-shadow: 0 0 14px var(--secundary-color); /*para crear una sombra*/
+}
+.social-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center; /*para centarar el contenido*/
+}
+.contact-img-linck {
+  height: 25px;
+  border-radius: 50%;
+}
+.contact-img-linck:hover {
+  filter: drop-shadow(0 0 5px var(--secundary-color)); /*para crear una sombra*/
+  cursor: pointer;
+}
+
+@media (min-width: 950px) {
+  .contact {
+    width: 100%;
+    font-size: 20px;
+    border-radius: 14px;
+    padding: 70px;
+    max-width: 980px;
+    margin: 0 auto;
+    box-sizing: border-box; /* para definir el tamaño de la caja o box en general*/
+  }
+
+  .contact-title {
+    font-size: 35px;
+    text-align: left; /*para ubicar el texto dentreo del box*/
+  }
+  .social-list {
+    justify-content: flex-start; /*para ubicar el contenido dentreo del box*/
+  }
+  .contact-img-linck {
+    height: 35px;
+  }
+  /*usando grid para cambiar la pocicion de los elementos dentreo del box*/
+  /*agregando un area con grid*/
+  /*una ves agregada el area a cada hijo de grid todo se desordenara*/
+  .contact-title {
+    grid-area: title;
+  }
+  .contact-details {
+    grid-area: details;
+  }
+  .contact-form {
+    grid-area: form;
+  }
+  .social {
+    grid-area: social;
+  }
+  /*despues de llamar el elemento grid usaremos este para uvicar nuestros elementos en la
+  pocicion que querramos*/
+  .contact {
+    display: grid;
+    grid:
+      "title form" auto /*definimos las columnas*/
+      "details form" 1fr /*para que ocupe este tamaño la fila */
+      "social form" / auto
+      1fr 1fr; /*para que las columnas tengan el mismo tamaño*/
+    align-items: star; /*para aliniar todos los elementos por igual*/
+  }
+}
